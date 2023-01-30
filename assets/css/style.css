@@ -1,3 +1,287 @@
+
 body {
-    background: blue
+    font-family: sans-serif;
+    color: lightgray;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+}
+
+/* ------------------------------------------------------------------------------------------- Background Image setup */
+
+.background-image {
+    width: 100%;
+    height: auto;
+    background: url("https://i.imgur.com/3EpT1ox.png") no-repeat bottom right fixed; /* Background image, hosted on Imagr*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    justify-content: center;
+    border: 0;
+}
+
+/* ------------------------------------------------------------------------------------------- Intro text page */
+
+.blank-background {
+    background-color: #000; /* Black background whilst animation is happening */
+    opacity: 1;
+}
+
+.welcome-page-content {
+    width: 100%;
+}
+
+.js-welcome-page {
+    width: 100%;
+    height: 100%;
+}
+
+.welcome-overlay {
+    margin: auto;
+    margin-top: 25%;
+    border-radius: 25px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+#welcome {
+    font-size: 200%;
+    font-family: monospace;
+    color: #fff;
+    animation: fade 8s;
+    animation-fill-mode: forwards;
+    z-index: 6;
+}
+
+#welcome-banner {
+    background-color: rgb(88, 88, 88);
+    font-size: 75%;
+}
+
+.welcome-button {
+    padding: 5px;
+}
+
+
+/* ------------------------------------------------------------------------------------------- Animation */
+/* animation idea inspired and adapted from Abi Harrison former code Institute grad.*/
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.click-to-enter {
+    width: 100%;
+    align-items: center;
+}
+
+#enter {
+    font-size: 150%;
+    font-family: monospace;
+    color: #fff;
+    text-align: center;
+    animation: fade-in 10s;
+}
+
+/* ------------------------------------------------------------------------------------------- Core area */
+
+#navButtons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.button {
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.button, .welcome-button {
+    background-color: rgba(218, 32, 32, 0.9);
+    border-radius: 50%;
+    color: #000;
+    text-align: center;
+    border: 2px solid #000;
+    box-shadow: 1px 1px 2px black, 0 0 5px rgb(255,255,255);
+    font-size: 60%;
+}
+
+#logo {
+    margin: 0 auto;
+    margin-top: 5%;
+    background-color: rgba(218,165,32,0.5);
+    border-radius: 25px;
+    padding: 25px;
+    width: 60%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hiden {
+    display: none;
+}
+
+/* ------------------------------------------------------------------------------------------- House selectors and Q+As */
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    margin-bottom: 50px;
+}
+
+.page-content {
+    width: 90%;
+}
+
+.page-content, .solemnly-page-content {
+    height: 85%;
+    flex-direction: row;
+    text-align: center;
+    margin: auto;
+}
+
+.choose-house, .question-text {
+    font-size: 300%;
+    text-shadow: 3px 3px 4px black;
+    text-align: center;
+    background-color: rgba(218,165,32,0.8);
+    border-radius: 25px;
+    width: 65%;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.overlay {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 25px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
+    height: 125px;
+}
+
+.house, .answer {
+    width: 100%;
+    height: 80%;
+    justify-content: space-evenly;
+    border-radius: 25px;
+    border: 2px solid #000;
+    box-shadow: 1px 1px 2px black, 0 0 5px rgb(255,255,255);
+}
+
+.house-text, .answer-text {
+    text-align: center;
+    font-size: 140%;
+    font-weight: bold;
+}
+
+.house-selector, .answer-selector {
+    width: 24%;
+    height: 100%;
+}
+
+.gryffindor .answer, .gryffindor-color {
+    background-color: #d74f40;
+    color: #fbb928;
+}
+
+.slytherin .answer, .slytherin-color {
+    background-color: #005d4a;
+    color: #a7acaf;
+}
+
+.hufflepuff .answer, .hufflepuff-color {
+    background-color: #fbb92f;
+    color: #07080c;
+}
+
+.ravenclaw .answer, .ravenclaw-color {
+    background-color: #203268;
+    color: #886031;
+}
+
+#question-text, #how-to-play-text {
+    font-size: 250%;
+    color: #07080c;
+    text-shadow: 2px 2px 3px white;
+    background-color: rgba(218,165,32,0.5);
+    border-radius: 25px;
+    padding: 25px;
+    margin: auto;
+    margin-bottom: 2%;
+    margin-top: 5%;
+    width: 75%;
+    text-align: center;
+}
+
+.answer-color {
+    background-color: #d74f40;
+    color: #fbb928;
+}
+
+.answer-overlay {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.progress-position {
+    height: 25px;
+    z-index: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+.progress-overlay {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 25px;
+    height: 200%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
 }

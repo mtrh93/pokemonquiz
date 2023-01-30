@@ -7,8 +7,29 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
-<body>
-    
+<body id="body" class="blank-background">
+    <header id="script-navbar" class="hiden">
+        <nav id="navButtons">
+            <button class="button" onclick="instructionsPage()"><i class="nav mh-info"></i><br>Instructions</button>
+            <button class="button" onclick="homePage()"><i class="nav mh-home"></i><br>Home</button>
+            <button class="button" id="restart" onclick=><i class="nav mh-restart"></i><br>Restart</button>
+        </nav>
+    </header>
+    <main id="main-area">
+        <section id="js-welcome-page" class="welcome-page-content" onclick="enterQuiz()">
+            <div class="welcome-banner">
+                <p id="welcome">
+                    Hello ...............
+                    welcome to the wonderful world of pokemon
+                </p>
+            </div>
+            <div class="click-to-enter">
+                <p id="enter">Click to enter...</p>
+            </div>
+        </section>
+    </main>
+
+
     <script src="assets/script/script.js"></script>
 </body>
 </html>

@@ -58,15 +58,12 @@ function toSettingsPage() {
 function navbarMovement() {
     scorePage.classList.add("hiden");
     quizpage.classList.add("hiden");
-    clearInterval(countTimer);
-    seconds = 120;
-    whichMusic();
 }
 
 
 // ---------------------------------------------------------------- Fading in front page
 
-function startQuiz() {
+function enterQuiz() {
         navbar.classList.remove("hiden"); // Show navbar
         bodyPage.classList.add("background-image"); // Add normal background image
         bodyPage.classList.remove("blank-background"); // Remove black background
@@ -152,7 +149,7 @@ function resetQuiz(type) { // Reset the type at the start, so if the user is pla
 
 // ---------------------------------------------------------------- Chooses question set depending on which type was chosen
 
-function selectQuestionSet() {
+function chooseQuestionSet() {
     const fullQuestions = JSON.parse(JSON.stringify(questions));
     if (typeChosen === "fire") {
         questionsSet = fullQuestions[0];
@@ -248,7 +245,6 @@ function removeOldQuestion() {
 // ---------------------------------------------------------------- Start the quiz
 
 function startQuiz() { // Starts the quiz from scratch,
-    clearInterval(timerFunction);
     currentScore = 0;
     questionsAnswered = 0;
     pushScore();

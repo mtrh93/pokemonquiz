@@ -16,7 +16,7 @@
         </nav>
     </header>
     <main id="main-area">
-        <section id="js-welcome-page" class="welcome-page-content" onclick="enterQuiz()">
+        <section id="welcome-page" class="welcome-page-content" onclick="startQuiz()">
             <div class="welcome-banner">
                 <p id="welcome">
                     Hello ...............
@@ -29,6 +29,75 @@
         </section>
     </main>
 
+    <section id="choose-type-page" class="page-content hiden">
+        <img src="assets/images/logo.png" alt="Harry Potter logo" id="logo">
+        <h1 class="choose-house">Choose Your House</h1>
+        <div class="overlay">
+            <button class="house-text house gryffindor-color house-selector" onclick="setHouse('gryffindor')">Gryffindor</button>
+            <button class="house-text house slytherin-color house-selector"  onclick="setHouse('slytherin')">Slytherin</button>
+            <button class="house-text house hufflepuff-color house-selector" onclick="setHouse('hufflepuff')">Hufflepuff</button>
+            <button class="house-text house ravenclaw-color house-selector" onclick="setHouse('ravenclaw')">Ravenclaw</button>
+        </div>
+    </section>
+
+    <section id="quiz-page" class="page-content hiden">
+        <h1 id="question-text" class="question-text">Question</h1>
+        <div class="overlay answer-overlay" id="answer-overlay">
+            <button class="answer-text answer answer-selector" id="answer-one" onclick="checkAnswer('1')">Answer 1</button>
+            <button class="answer-text answer answer-selector" id="answer-two" onclick="checkAnswer('2')">Answer 2</button>
+            <button class="answer-text answer answer-selector" id="answer-three" onclick="checkAnswer('3')">Answer 3</button>
+            <button class="answer-text answer answer-selector" id="answer-four" onclick="checkAnswer('4')">Answer 4</button>
+        </div>
+        <div class="progress-position">
+            <div id="score">0 / 10</div>
+            <div class="progress-overlay">
+                <progress id="progress-bar" max="10" value="0"></progress>
+            </div>
+            <div id="timer">
+                <div id="counter">120 seconds</div> <!--2 minutes timer total for the quiz-->
+            </div>
+        </div>
+    </section>
+
+    <section id="score-page" class="page-content hiden">
+        <h1 class="result-text">Your Result</h1>
+        <section>
+            <div class="score">
+                <h2 id="scoring"></h2>
+                <br>
+            </div>
+            <figure class="result-image-container">
+                <img src="assets/images/galleons.jpg" alt="An image that relates to what score you got." class="result-image" id="result-image">
+                <br>
+            </figure>
+            <div class="quote">
+                <p id="result-quote" class="result-quote">
+                    Quote here
+                </p>
+            </div>
+        </section>
+    </section>
+
+    <section id="how-to-play-page" class="page-content hiden">
+        <h1 id="how-to-play-text">How To Play</h1>
+        <div id="how-to-play-overlay">
+            <div id="how-to-play">
+                <ul>
+                    <li class="how-to-play-p">Choose your Type on the selection to play the quiz.</li>
+                    <li class="how-to-play-p">You'll be shown a question, and four possible answers.</li>
+                    <li class="how-to-play-p">Click the answer you believe is correct.</li>
+                    <li class="how-to-play-p">If it's correct, your score beneath will update.</li>
+                    <li class="how-to-play-p">If it's incorrect, your score beneath will not update.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer id="footer" class="copyright hiden">
+    <p><i class="far fa-copyright"></i> Copyright J.K. Rowling<br>& Warner Bros Entertainment Inc.</p>
+</footer>
 
     <script src="assets/script/script.js"></script>
 </body>

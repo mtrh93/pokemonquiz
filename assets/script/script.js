@@ -134,9 +134,9 @@ const questions = [
 
 function setType(type) {
 
-    resetQuiz(houseChosen); // Reset which house was chosen for repeated
+    resetQuiz(typeChosen); // Reset which type was chosen for repeated
 
-    houseChosen = house;
+    typeChosen = type;
     answers.classList.add(`${type}`);
 
     homepage.classList.add("hiden"); // Hide home page
@@ -152,15 +152,15 @@ function resetQuiz(type) { // Reset the type at the start, so if the user is pla
 
 // ---------------------------------------------------------------- Chooses question set depending on which type was chosen
 
-function chooseQuestionSet() {
+function selectQuestionSet() {
     const fullQuestions = JSON.parse(JSON.stringify(questions));
-    if (houseChosen === "fire") {
+    if (typeChosen === "fire") {
         questionsSet = fullQuestions[0];
-    } else if (houseChosen === "grass") {
+    } else if (typeChosen === "grass") {
         questionsSet = fullQuestions[1];
-    } else if (houseChosen === "electric") {
+    } else if (typeChosen === "electric") {
         questionsSet = fullQuestions[2];
-    } else if (houseChosen === "water") {
+    } else if (typeChosen === "water") {
         questionsSet = fullQuestions[3];
     } else {
         alert("That's not a valid type. Please return to the welcome page and choose again.");

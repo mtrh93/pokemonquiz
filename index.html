@@ -30,13 +30,12 @@
     </main>
 
     <section id="choose-type-page" class="page-content hiden">
-        <img src="assets/images/logo.png" alt="Harry Potter logo" id="logo">
         <h1 class="choose-house">Choose Your House</h1>
         <div class="overlay">
-            <button class="house-text house gryffindor-color house-selector" onclick="setHouse('gryffindor')">Gryffindor</button>
-            <button class="house-text house slytherin-color house-selector"  onclick="setHouse('slytherin')">Slytherin</button>
-            <button class="house-text house hufflepuff-color house-selector" onclick="setHouse('hufflepuff')">Hufflepuff</button>
-            <button class="house-text house ravenclaw-color house-selector" onclick="setHouse('ravenclaw')">Ravenclaw</button>
+            <button class="type-text type fire-color type-selector" onclick="setType('fire')">Fire</button>
+            <button class="type-text type grass-color type-selector"  onclick="setType('grass')">Grass</button>
+            <button class="type-text type electric-color type-selector" onclick="setType('electric')">Electric</button>
+            <button class="type-text type water-color type-selector" onclick="setType('water')">Water</button>
         </div>
     </section>
 
@@ -53,9 +52,6 @@
             <div class="progress-overlay">
                 <progress id="progress-bar" max="10" value="0"></progress>
             </div>
-            <div id="timer">
-                <div id="counter">120 seconds</div> <!--2 minutes timer total for the quiz-->
-            </div>
         </div>
     </section>
 
@@ -66,10 +62,6 @@
                 <h2 id="scoring"></h2>
                 <br>
             </div>
-            <figure class="result-image-container">
-                <img src="assets/images/galleons.jpg" alt="An image that relates to what score you got." class="result-image" id="result-image">
-                <br>
-            </figure>
             <div class="quote">
                 <p id="result-quote" class="result-quote">
                     Quote here

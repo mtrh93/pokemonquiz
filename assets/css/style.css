@@ -33,7 +33,7 @@ body {
     width: 100%;
 }
 
-.js-welcome-page {
+.welcome-page {
     width: 100%;
     height: 100%;
 }
@@ -141,16 +141,6 @@ body {
     box-shadow: 1px 1px 2px black, 0 0 5px rgb(255,255,255);
     font-size: 60%;
 }
-
-#logo {
-    margin: 0 auto;
-    margin-top: 5%;
-    background-color: rgba(218,165,32,0.5);
-    border-radius: 25px;
-    padding: 25px;
-    width: 60%;
-}
-
 a {
     text-decoration: none;
 }
@@ -173,14 +163,14 @@ a {
     width: 90%;
 }
 
-.page-content, .solemnly-page-content {
+.page-content, .welcome-page-content {
     height: 85%;
     flex-direction: row;
     text-align: center;
     margin: auto;
 }
 
-.choose-house, .question-text {
+.choose-type, .question-text {
     font-size: 300%;
     text-shadow: 3px 3px 4px black;
     text-align: center;
@@ -202,7 +192,7 @@ a {
     height: 125px;
 }
 
-.house, .answer {
+.type, .answer {
     width: 100%;
     height: 80%;
     justify-content: space-evenly;
@@ -211,33 +201,33 @@ a {
     box-shadow: 1px 1px 2px black, 0 0 5px rgb(255,255,255);
 }
 
-.house-text, .answer-text {
+.type-text, .answer-text {
     text-align: center;
     font-size: 140%;
     font-weight: bold;
 }
 
-.house-selector, .answer-selector {
+.type-selector, .answer-selector {
     width: 24%;
     height: 100%;
 }
 
-.gryffindor .answer, .gryffindor-color {
+.fire .answer, .fire-color {
     background-color: #d74f40;
     color: #fbb928;
 }
 
-.slytherin .answer, .slytherin-color {
+.grass .answer, .grass-color {
     background-color: #005d4a;
     color: #a7acaf;
 }
 
-.hufflepuff .answer, .hufflepuff-color {
+.electric .answer, .electric-color {
     background-color: #fbb92f;
     color: #07080c;
 }
 
-.ravenclaw .answer, .ravenclaw-color {
+.water .answer, .water-color {
     background-color: #203268;
     color: #886031;
 }
@@ -284,4 +274,412 @@ a {
     width: 50%;
     display: flex;
     justify-content: center;
+}
+
+/* Thanks to https://css-tricks.com/html5-progress-element/ for the progress bar */
+
+progress {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    z-index: 2;
+    height: 70%;
+    width: 90%;
+    border-radius: 15px;
+    align-self: center;
+}
+
+progress[value]::-moz-progress-bar { /* Edit styling on Mozilla Firebox web browser */
+    background-image:
+        -moz-linear-gradient(-45deg, 
+	                        transparent 33%, rgba(0, 0, 0, .1) 33%, 
+	                        rgba(0,0, 0, .1) 66%, transparent 66%),
+	    -moz-linear-gradient(top, 
+	                        rgba(255, 255, 255, .25), 
+	                        rgba(0, 0, 0, .25)),
+	    -moz-linear-gradient(left, #07080c, #000);
+
+    border-radius: 15px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}   
+
+progress[value]::-webkit-progress-bar { /* Edit outer styling on other web browsers */
+  background-color: #a0a150;
+  border-radius: 15px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value { /* Edit inner styling on other web browsers */
+    background-image:
+	    -webkit-linear-gradient(-45deg, 
+	                        transparent 33%, rgba(0, 0, 0, .1) 33%, 
+	                        rgba(0,0, 0, .1) 66%, transparent 66%),
+	    -webkit-linear-gradient(top, 
+	                        rgba(255, 255, 255, .25), 
+	                        rgba(0, 0, 0, .25)),
+	    -webkit-linear-gradient(left, #07080c, #000);
+
+    border-radius: 15px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+#score, #timer {
+    background: rgba(255,255,255,0.6);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    color: #07080c;
+    font-size: 25px;
+}
+
+/* ------------------------------------------------------------------------------------------- Results */
+
+.result-text {
+    font-size: 250%;
+    color: #07080c;
+    text-shadow: 2px 2px 3px white;
+    background-color: rgba(218,165,32,0.5);
+    border-radius: 25px;
+    padding: 15px;
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.score {
+    font-size: 100%;
+    color: #07080c;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 25px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 2%;
+    height: 50px;
+    width: 25%;
+    text-align: center;
+}
+
+h2 {
+    margin: 0;
+    margin-bottom: 5%;
+}
+
+.quote {
+    font-size: 25px;
+    color: #07080c;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 25px;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+    width: 75%;
+}
+
+.result-quote {
+    font-size: 100%;
+}
+
+#result-button {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+/* ------------------------------------------------------------------------------------------- Instructions */
+
+#how-to-play-overlay {
+    width: 75%;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 25px;
+    z-index: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 25px;
+    margin: 0 auto;
+}
+
+.how-to-play-p {
+    color: #000;
+    font-size: 125%;
+    font-weight: bold;
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+/* ------------------------------------------------------------------------------------------- Footer */
+
+footer {
+    background-color: rgba(255,255,255,0.4);
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.copyright {
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+    color: black;
+}
+
+/* ------------------------------------------------------------------------------------------- Responsive design */
+
+@media screen and (max-width: 1200px) { /* Media queries for smaller computer screens */
+    .choose-type, .question-text {
+        font-size: 200%;
+    }
+    .overlay {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 1100px) and (orientation: landscape) { /* Media queries for landscape tablet */
+    .welcome-overlay {
+        margin-top: 20%;
+    }
+    #welcome {
+        font-size: 200%;
+    }
+    #enter {
+        font-size: 150%;
+    }
+    .type-text, .answer-text {
+        font-size: 125%;
+    }
+    .overlay {
+        height: 125px;
+        width: 50%;
+        margin: auto;
+    }
+    .choose-type, .question-text {
+        margin-top: 2%;
+        margin-bottom: 2%;
+        font-size: 150%;
+    }
+    #question-text, #how-to-play-text {
+        font-size: 150%;
+        margin-top: 5%;
+    }
+    .type-selector, .answer-selector {
+        width: 100%;
+        height: 40%;
+        margin-bottom: 3px;
+    }
+    #score, #timer {
+        font-size: 80%;
+    }
+    .progress-position {
+        margin-top: 25%;
+    }
+    .progress-overlay {
+        height: 150%;
+    }
+    .result-text {
+        margin-top: 2%;
+        margin-bottom: 2%;
+        font-size: 200%;
+    }
+    .score {
+        margin-bottom: 0;
+    }
+    .quote {
+        width: 100%;
+    }
+    .result-quote {
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+    .how-to-play-p {
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width: 992px) and (orientation: portrait) { /* Media queries for portrait tablet */
+    .welcome-overlay {
+        margin-top: 40%;
+    }
+    #welcome {
+        font-size: 200%;
+    }
+    #enter {
+        font-size: 150%;
+    }
+    .type-text, .answer-text {
+        font-size: 125%;
+    }
+    .overlay {
+        height: 125px;
+    }
+    .choose-type, .question-text {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        font-size: 150%;
+        width: 80%;
+    }
+    #question-text, #how-to-play-text {
+        font-size: 200%;
+        margin-top: 5%;
+    }
+    .type-selector, .answer-selector {
+        width: 100%;
+        height: 55%;
+        margin-bottom: 3px;
+    }
+    #score, #timer {
+        font-size: 80%;
+    }
+    .progress-position {
+        margin-top: 45%;
+    }
+    .progress-overlay {
+        height: 150%;
+    }
+    .result-text {
+        margin-top: 10%;
+        margin-bottom: 5%;
+        font-size: 200%;
+    }
+    .score {
+        margin-bottom: 5%;
+    }
+    .how-to-play-p {
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape) { /* Media queries for landscape mobile */
+    #welcome {
+        font-size: 125%;
+    }
+    .welcome-overlay {
+        margin-top: 10%;
+    }
+    #enter {
+        font-size: 100%;
+    }
+    .type-text, .answer-text {
+        font-size: 75%;
+    }
+    .button {
+        font-size: 45%;
+    }
+    .overlay {
+        height: 50px;
+        margin-top: 10px;
+    }
+    .choose-type, .question-text {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 150%;
+    }
+    #question-text, #how-to-play-text {
+        font-size: 100%;
+        margin-bottom: 2%;
+        padding: 10px;
+    }
+    .type-selector, .answer-selector {
+        height: 100%;
+    }
+    #score, #timer {
+        font-size: 60%;
+        height: 100%;
+    }
+    .score {
+        padding: 0;
+        margin-bottom: 0;
+        height: 40px;
+    }
+    figure {
+        margin: 2px;
+    }
+    .result-text {
+        font-size: 100%;
+        padding: 10px;
+    }
+    h2 {
+        font-size: 100%;
+        padding-top: 5%;
+    }
+    .result-quote {
+        font-size: 60%;
+    }
+    .quote {
+        padding: 1px;
+        width: 100%;
+    }
+    .how-to-play-p {
+        font-size: 60%;
+    }
+    #how-to-play-overlay {
+        padding: 7px;
+    }
+    footer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) and (orientation: portrait) { /* Media queries for portrait mobile */
+    #welcome {
+        font-size: 125%;
+    }
+    #enter {
+        font-size: 100%;
+    }
+    .type-text, .answer-text {
+        font-size: 75%;
+    }
+    .button {
+        font-size: 45%;
+    }
+    .overlay {
+        height: 100px;
+    }
+    .choose-type, .question-text {
+        margin-top: 10%;
+        margin-bottom: 5%;
+        font-size: 150%;
+    }
+    #question-text, #how-to-play-text {
+        font-size: 100%;
+        margin-bottom: 5%;
+    }
+    .type-selector, .answer-selector {
+        height: 45%;
+    }
+    #score, #timer {
+        font-size: 60%;
+        height: 100%;
+    }
+    .result-text {
+        font-size: 150%;
+    }
+    h2 {
+        font-size: 100%;
+        padding-top: 5%;
+    }
+    .result-quote {
+        font-size: 75%;
+    }
+    .quote {
+        padding: 10px;
+    }
+    .how-to-play-p {
+        font-size: 60%;
+    }
+    footer {
+        display: none;
+    }
 }

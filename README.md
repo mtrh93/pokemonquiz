@@ -42,6 +42,7 @@ the four types chosen are taken from the original pokemon red, blue and yellow g
 
 * **Quiz Page**
 The quiz page is where the questions are asked and the user can select answers. The quiz page background is changed depending on theme chosen.
+The question order is also randomized thanks to a javascript function.
 
 ![PokemonQuiz](assets/Images/choosetypepage.png)
 
@@ -83,7 +84,9 @@ No erros were found in the CSS
 
 General
 
-The script was throwing an error due to the show score page not correctly being identified as the wrong elementselectbyID was stated at start of the page. This was fixed show that score was shwoing correctly.
+The script was throwing an error due to the show score page not correctly being identified as the wrong elementselectbyID was stated at start of the page. This was fixed show that score was showing correctly.
+
+The quiz works as intended and the score displays correctly. it works on multiple devices. The correct answers increase the score count and correctly shows the allocated quote at the end depending on this count score.
 
 ---
 ## Launch and Deployment
@@ -96,13 +99,16 @@ The script was throwing an error due to the show score page not correctly being 
 
 ## Future Features
 
-*Currently the instructions page overwrites existing quiz progress. future update to make it not make the user estart by including function to save progress.
+* Currently the instructions page overwrites existing quiz progress. future update to make it not make the user estart by including function to save progress.
+* Future update would be to change the nav buttons to resmeble pokeballs to more go into the theme
 ---
 
 ## Credits
+* (https://css-tricks.com/html5-progress-element/) for the progress bar
+* 
+
 
 ### Content
-* The layout of the webpage came from inspiration of the CI [Love Running Project](https://ddrobrien.github.io/Love-Running/)
 * The font came from [google font](https://fonts.google.com/)
 * Color palette inspiration came from pokemon colour palletes (https://pokepalettes.com/)
 * html validation came from [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input)

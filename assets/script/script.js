@@ -23,10 +23,10 @@ let scoreArea = document.getElementById("scoring");
 
 // ---------------------------------------------------------------- Questions variables
 
-let questionsSet;
-let currentQuestion;
+let questionArray;
+let activeQuestion;
 let questionPool;
-let questionsSetLength;
+let questionArrayLength;
 let resultQuote = document.getElementById("result-quote");
 
 // ----------------------------------------------------------------------------------------------------------------------------------------- Page functions
@@ -163,45 +163,45 @@ function backgroundChange() {
 }
 
 function chooseQuestionSet() {
-    const fullQuestions = JSON.parse(JSON.stringify(questions));
+    const wholeQuestions = JSON.parse(JSON.stringify(questions));
     if (typeChosen === "fire") {
-        questionsSet = fullQuestions[0];
+        questionArray = wholeQuestions[0];
     } else if (typeChosen === "grass") {
-        questionsSet = fullQuestions[1];
+        questionArray = wholeQuestions[1];
     } else if (typeChosen === "electric") {
-        questionsSet = fullQuestions[2];
+        questionArray = wholeQuestions[2];
     } else if (typeChosen === "water") {
-        questionsSet = fullQuestions[3];
+        questionArray = wholeQuestions[3];
     } else {
         alert("That's not a valid type. Please return to the welcome page and choose again.");
     }
-    questionsSetLength = questionsSet.length; // Set a variable to include the total number of questions in that set, which doesn't change as the questionPool decreases
-    document.getElementById("progress-bar").max = questionsSetLength; // Set the progress bar max to the number of questions in the total question set
+    questionArrayLength = questionArray.length; // Set a variable to include the total number of questions in that set, which doesn't change as the questionPool decreases
+    document.getElementById("progress-bar").max = questionArrayLength; // Set the progress bar max to the number of questions in the total question set
 }
 
 // ---------------------------------------------------------------- Randomises the order of the questions
 
 function randomiseQuestionOrder() {
-    questionPool = questionsSet.length;
+    questionPool = questionArray.length;
     let randomNumber = Math.floor(Math.random() * questionPool); // Gets a random number between 1 and the total number of questions remaining in the question pool
-    currentQuestion = questionsSet[`${randomNumber}`]; // Finds a question in the question set with that index number
+    activeQuestion = questionArray[`${randomNumber}`]; // Finds a question in the question set with that index number
 }
 
 function populateQuestion() { // Fills in the text for question and answer chosen by the randomiseQuestionOrder function
     let questionText = document.getElementById("question-text");
-    questionText.innerText = currentQuestion[0];
+    questionText.innerText = activeQuestion[0];
 
     let answerOne = document.getElementById("answer-one");
-    answerOne.innerText = currentQuestion[1];
+    answerOne.innerText = activeQuestion[1];
 
     let answerTwo = document.getElementById("answer-two");
-    answerTwo.innerText = currentQuestion[2];
+    answerTwo.innerText = activeQuestion[2];
 
     let answerThree = document.getElementById("answer-three");
-    answerThree.innerText = currentQuestion[3];
+    answerThree.innerText = activeQuestion[3];
 
     let answerFour = document.getElementById("answer-four");
-    answerFour.innerText = currentQuestion[4];
+    answerFour.innerText = activeQuestion[4];
 }
 
 // ---------------------------------------------------------------- To end the quiz
@@ -210,7 +210,7 @@ function endQuiz() {
     showScorePage();
     document.getElementById("progress-bar").value = 0;
     scoreArea.innerText = "";
-    questionsSet = 0;
+    questionArray = 0;
 }
 
 
@@ -225,7 +225,7 @@ function pushProgress() {
 }
 
 function checkAnswer(num) {
-    if (currentQuestion[num] == currentQuestion[5]) { // if content of index of clicked answer is equal to the question correct answer
+    if (activeQuestion[num] == activeQuestion[5]) { // if content of index of clicked answer is equal to the question correct answer
        currentScore++; // Add to the score
        questionsAnswered++; // Increment how many questions are answered
        pushScore();
@@ -237,12 +237,12 @@ function checkAnswer(num) {
 }
 
 function nextQuestion() {
-    if (questionsAnswered < questionsSetLength) { // checks to see if the current question is the last question or not
+    if (questionsAnswered < questionArrayLength) { // checks to see if the current question is the last question or not
         questionPool--; // Decrement the question pool for the Randomizer
         removeOldQuestion();
         randomiseQuestionOrder();
         populateQuestion();
-    } else if (questionsAnswered === questionsSetLength) { // ends the quiz if its final question
+    } else if (questionsAnswered === questionArrayLength) { // ends the quiz if its final question
        endQuiz();
     } else {
         alert("Oh no! Something went wrong! Please return to the homepage and try again.");
@@ -250,8 +250,8 @@ function nextQuestion() {
 }
 
 function removeOldQuestion() {
-    let questionIndex = questionsSet.indexOf(currentQuestion);
-    questionsSet.splice(questionIndex,1); // Remove the question from the set of questions
+    let questionIndex = questionArray.indexOf(activeQuestion);
+    questionArray.splice(questionIndex,1); // Remove the question from the set of questions
 }
 
 

@@ -8,7 +8,7 @@ The quiz is purely designed to test general/specific knowledge relating to the e
 
 The project was created using HTML and CSS and JavaScript. 
 
-![PokemonQuiz](assets/Images/choosetypepage.png)
+![HomePage](assets/Images/choosetypepage.png)
 
 ---
 ## Site Features
@@ -26,28 +26,41 @@ The final page is a score page displaying what score the user got.
 The opening welcome page is an homage to how most of the original pokemon games start with a black background and white text appearing and fading.
 Animation in css was used to create this effect and relates the quiz from the beginnign to the chosen theme.
 
- ![PokemonQuiz](assets/Images/wlecome page.png)
+ ![WelcomePage](assets/Images/WelcomePage.png)
 
 * **Home Page**
 The home page is where the user can actiely engange and select the type they wish to set the quiz to. This will cusomize the quiz page to theme the page to their choice of type.
 the four types chosen are taken from the original pokemon red, blue and yellow games of fire, grass, water and electric.
 
-![PokemonQuiz](assets/Images/fire page.png)
+![FirePage](assets/Images/FirePage.png)
 
-![PokemonQuiz](assets/Images/grass page.png)
+![GrassPage](assets/Images/GrassPage.png)
 
-![PokemonQuiz](assets/Images/electric page.png)
+![ElectricPage](assets/Images/ElectricPage.png)
 
-![PokemonQuiz](assets/Images/water page.png)
+![WaterPage](assets/Images/WaterPage.png)
 
-* **quiz Page**
+* **Quiz Page**
 The quiz page is where the questions are asked and the user can select answers. The quiz page background is changed depending on theme chosen.
 
 ![PokemonQuiz](assets/Images/choosetypepage.png)
 
-* **Color Scheme**
+* **Score Page**
+The score page is the last page the user will see and provides the users answer and a quote.
 
-![Battle of the Bulge](/assets/Images/colorpalette.png)
+![ScorePage](assets/Images/ScorePage.png)
+
+* **Instructions Page**
+The instrucitons Page is an optional page that the user wmay not see but provides a guide to the user on how the quiz functions.
+
+![ScorePage](assets/Images/ScorePage.png)
+
+* **Color Scheme**
+The colour pallete for this project was taken from a multitude of pokemon themes.
+The Welcome page was black and white text which is easily readble and resmebles the look of early generation pokemon game intro's.
+the Home Page features buttons and heading with white lettering and red background as used by the iconic pokeball colours.
+The different type colour themes are from the colour palletes of the pokemon used in the background image. These are charmader, pikachu, bulbasaur and squirtle.
+The questions and instructions page are black text one a white faded background. This was so the questions and instructions were readable with the transparency so that the background was still visible behind as the changing background is a function.
 
 
 ---
@@ -56,59 +69,41 @@ The quiz page is where the questions are asked and the user can select answers. 
 * This project is responsive and has been designed to work on larger screens as well as small screens, using dev tools it has been tested on iphone screens, ipad screens, as well as other tablets. 
 * All text is written and easy to understand
 
-### Testing of Home page
+![DeviceCapture](assets/Images/DeviceCapture.png)
 
-![Testing image](assets/Images/testinghomepage.png)
+### Testing
+HTML
+Below is a detail of the erro found in the html
+Error: Stray end tag main.
+From line 87, column 1; to line 87, column 7
+This stray tag was removed.
 
-### Testing of Timeline page
+CSS
+No erros were found in the CSS
 
-![Timeline testing](assets/Images/testingtimeline.png)
+General
 
-### Testing of Gallery Page
-
-![Sign Up testing](assets/Images/testinggallery.png)
-
-## Validator testing
-
-*html
-All code and pages have been checked through the W3C Markup Validation Service. The 1st error that came back was for a lack of opening p element in the index file, the checker expected to see an opening element after finding a closing element which was there btu it didnt see.
-The 2nd error was an illegal character on the gallery page which was a space.
-
-*css
-All css code has been run through the W3C CSS Validation Service and has been passed with no errors found. 
-
-* **Bugs**
-All bugs for the webpage have been fixed. 
-
-* **Bug Fixes**
-* in the gallery page there were issues with the images placing directly nxt to each other, padding was introduced to seperate.
-* the navigation menu when on smaller screens would have the "timetable" link would disapear off screen, text sizing and text spacing was reduced to allow this to be visisble.
+The script was throwing an error due to the show score page not correctly being identified as the wrong elementselectbyID was stated at start of the page. This was fixed show that score was shwoing correctly.
 
 ---
 ## Launch and Deployment
 * In the GitHub repository, navigate to the Settings tab.  
 * Scroll down to the GitHub Pages section and click the 'Check it out here!' link.  
 
-* The project has been created using gitpod and deployed using GitHub, the link for the live page is (https://ddrobrien.github.io/Millie-Cares/)
+* The project has been created using gitpod and deployed using GitHub, the link for the live page is (https://mtrh93.github.io/pokemonquiz/)
 
 ---
 
 ## Future Features
 
-* This page can have a further video added to bottom of home page.
-* A map of the site of the battle
-* A list of museums for planning a visit to the battle site
+*Currently the instructions page overwrites existing quiz progress. future update to make it not make the user estart by including function to save progress.
 ---
 
 ## Credits
 
 ### Content
 * The layout of the webpage came from inspiration of the CI [Love Running Project](https://ddrobrien.github.io/Love-Running/)
-* Inspiration for both the gallery and sign up came from the CI [Love Running Project](https://ddrobrien.github.io/Love-Running/)
-* The code for the navigation menu came from CI [Love Running Project](https://ddrobrien.github.io/Love-Running/)
 * The font came from [google font](https://fonts.google.com/)
-* Color palette inspiration came from [coolers.co](https://coolors.co/)
+* Color palette inspiration came from pokemon colour palletes (https://pokepalettes.com/)
 * html validation came from [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input)
 * css validation came from [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
-icons inspiration came from [Love Runnning Project] but sourced from [Font Awesome](https://fontawesome.com/)
-* The video was sourced from [History Uk](https://www.history.co.uk/)

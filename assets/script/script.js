@@ -27,6 +27,7 @@ let questionsSet;
 let currentQuestion;
 let questionPool;
 let questionsSetLength;
+let resultQuote = document.getElementById("result-quote");
 
 // ----------------------------------------------------------------------------------------------------------------------------------------- Page functions
 // ---------------------------------------------------------------- Navigations
@@ -36,25 +37,31 @@ function toHomePage() {
     homepage.classList.remove("hiden");
     howToPlay.classList.add("hiden");
     quizpage.classList.add("hiden");
+    bodyPage.classList.remove("fire-background");
+    bodyPage.classList.remove("grass-background");
+    bodyPage.classList.remove("electric-background");
+    bodyPage.classList.remove("water-background");
+    bodyPage.classList.add("background-image");
+    howToPlay.classList.add("hiden");
     navbarMovement();
 }
 
 function toInstructionsPage() {
     homepage.classList.add("hiden");
     howToPlay.classList.remove("hiden");
+    quizpage.classList.add("hiden");
     navbarMovement();
 }
 
 
 function navbarMovement() {
     scorePage.classList.add("hiden");
-    quizpage.classList.add("hiden");
 }
 
 
 // ---------------------------------------------------------------- Fading in front page
 
-function enterQuiz() {
+function loadQuiz() {
         navbar.classList.remove("hiden"); // Show navbar
         bodyPage.classList.add("background-image"); // Add normal background image
         bodyPage.classList.remove("blank-background"); // Remove black background
@@ -129,6 +136,7 @@ function setType(type) {
     homepage.classList.add("hiden"); // Hide home page
     quizpage.classList.remove("hiden"); // Show quiz page
 
+    backgroundChange()
     startQuiz();
 }
 
@@ -141,19 +149,18 @@ function resetQuiz(type) { // Reset the type at the start, so if the user is pla
 function backgroundChange() {
     if (typeChosen === "fire") {
         bodyPage.classList.remove("background-image"); // remove normal background image
-        bodyPage.classList.remove("blank-background"); // add fire background
+        bodyPage.classList.add("fire-background"); // add fire background
     } else if (typeChosen === "grass") {
-        questionsSet = fullQuestions[1];
+        bodyPage.classList.remove("background-image"); // remove normal background image
+        bodyPage.classList.add("grass-background"); // add grass background
     } else if (typeChosen === "electric") {
-        questionsSet = fullQuestions[2];
+        bodyPage.classList.remove("background-image"); // remove normal background image
+        bodyPage.classList.add("electric-background"); // add electric background
     } else if (typeChosen === "water") {
-        questionsSet = fullQuestions[3];
+        bodyPage.classList.remove("background-image"); // remove normal background image
+        bodyPage.classList.add("water-background"); // add water background
     } 
 }
-
-
-
-
 
 function chooseQuestionSet() {
     const fullQuestions = JSON.parse(JSON.stringify(questions));
@@ -271,15 +278,15 @@ function pageSwap() {
 function showScorePage() { // Sets the result image and text depending on what score the user achieves
     scorePage.classList.remove("hiden");
     quizpage.classList.add("hiden");
-    document.getElementById("scoring").innerText = `${currentScore} / 10`; // Populate their score
+    document.getElementById("final-score").innerText = `${currentScore} / 10`; // Populate their score
     if (currentScore <= 2) {
-        resultQuote.innerText = "Well, I suppose you can always buy your acceptance to Hogwarts?";
+        resultQuote.innerText = "Did you ever leave Pallet town?";
     } else if (currentScore <= 5 && currentScore > 2) {
-        resultQuote.innerText = "Oh no! It looks like you could do with a Remembrall!";
+        resultQuote.innerText = "Did someone google a few answers?";
     } else if (currentScore <= 8 && currentScore > 5) {
-        resultQuote.innerText = "Congratulations, your Hogwarts acceptance letter is here! You could still do with a bit more revision before you go, though.";
+        resultQuote.innerText = "I know what you played when you were younger";
     } else if (currentScore <= 10 && currentScore > 8) {
-        resultQuote.innerText = "Here's your ticket for the Hogwarts express! You'll fit in just fine!";
+        resultQuote.innerText = "You are well on your way to becoming a pokemon Master";
     } else {
         alert("Oh no! Something went wrong! Please try again.");
     };

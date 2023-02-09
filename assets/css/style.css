@@ -372,7 +372,7 @@ progress[value]::-webkit-progress-value { /* Edit inner styling on other web bro
     background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 
-#score{
+#scoring{
     background: rgba(255,255,255,0.6);
     border-radius: 10px;
     padding: 10px;
@@ -648,7 +648,7 @@ footer p {
     .type-selector, .answer-selector {
         height: 100%;
     }
-    #score{
+    #scoring{
         font-size: 60%;
         height: 100%;
     }
@@ -714,7 +714,7 @@ footer p {
     .type-selector, .answer-selector {
         height: 45%;
     }
-    #score{
+    #scoring{
         font-size: 60%;
         height: 100%;
     }

@@ -323,7 +323,7 @@ progress[value]::-webkit-progress-value { /* Edit inner styling on other web bro
     background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 
-#scoring{
+#score{
     background: rgba(255,255,255,0.6);
     border-radius: 10px;
     padding: 10px;

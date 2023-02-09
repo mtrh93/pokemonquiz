@@ -1,4 +1,4 @@
-// ---------------------------------------------------------------- House variables
+// ----------------------------------------------------------------Type variables
 
 let typeChosen;
 let answers = document.getElementById("a-overlay");
@@ -19,8 +19,7 @@ const footerPage = document.getElementById("footer");
 
 let questionsAnswered = 0;
 let currentScore = 0;
-let scoreArea = document.getElementById("score");
-let counter = document.getElementById("counter");
+let scoreArea = document.getElementById("scoring");
 
 // ---------------------------------------------------------------- Questions variables
 
@@ -36,6 +35,7 @@ function toHomePage() {
     welcomePage.classList.add("hiden");
     homepage.classList.remove("hiden");
     howToPlay.classList.add("hiden");
+    quizpage.classList.add("hiden");
     navbarMovement();
 }
 
@@ -123,7 +123,7 @@ function setType(type) {
 
     resetQuiz(typeChosen); // Reset which type was chosen for repeated
 
-    houseChosen = type;
+    typeChosen = type;
     answers.classList.add(`${type}`);
 
     homepage.classList.add("hiden"); // Hide home page
@@ -132,7 +132,7 @@ function setType(type) {
     startQuiz();
 }
 
-function resetQuiz() { // Reset the type at the start, so if the user is playing a second time, they're not stuck with the same house
+function resetQuiz(type) { // Reset the type at the start, so if the user is playing a second time, they're not stuck with the same house
     answers.classList.remove(type);
     currentScore = 0;
 }

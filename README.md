@@ -8,7 +8,7 @@ The quiz is purely designed to test general/specific knowledge relating to the e
 
 The project was created using HTML and CSS and JavaScript. 
 
-![HomePage](assets/Images/choosetypepage.png)
+![HomePage](assets/Images/HomePage.png)
 
 ---
 ## Site Features

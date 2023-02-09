@@ -86,16 +86,16 @@ const questions = [
     ["What is the final evolution form of Charmander?", "Charizard", "Charmeleon", "Charmastadar", "Charmega", "Charizard"]
    ],
    [ // Grass
-   ["What was the fire type starter of genration one?", "Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Charmander"],
-   ["What was the name of the fire gym location in generation one?", "Ceruleon", "Lavaridge", "Cinnabar", "Pallet", "Cinnabar"],
-   ["What was the name of the fire type badge in generation one?", "Fire Badge", "Heat Badge", "Magma Badge", "Volcanoe Badge", "Volcanoe Badge"],
-   ["Which of the following types are super effective agaisnt fire types?", "Water", "Ice", "Grass", "Electric", "Water"],
-   ["What is the fire Evee evolution called?", "Jolteon", "Blazeon", "Flareon", "Burneon", "Flareon"],
+   ["What was the grass type starter of genration one?", "Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Bulbasaur"],
+   ["What was the name of the grass gym location in generation one?", "Celadon", "Lavaridge", "Saffron", "Pallet", "Celadon"],
+   ["which of the following are grass types super-effective against?", "Electric", "Dragon", "Fairy", "Ground", "Ground"],
+   ["What is the name of the pokemon that Oddish evolves into when it reaches level 21?", "Bellossom", "Gloom", "Oddishsa", "Vileplume", "Gloom"],
+   ["What is the grass Evee evolution called?", "Chikoreon", "Leafeon", "Flareon", "Grasseon", "Leafeon"],
    ["In generation two how many steps would it take to hatch a starter pokemon?", "2560", "5170", "5550", "5120", "5120"],
    ["Which of the below is the name of the fire type pokemon Growlithe's evolution?", "Growlihound", "Arcanine", "Lithengrowl", "Barkanine", "Arcanine"],
    ["What pokemon did ash first catch in a pokeball?", "Buterfree", "Caterpie", "Pikachu", "Pidgey", "Caterpie"],
-   ["What was the name of the fire legendary bird from generation one?", "Articuno", "Flamedos", "Phoenix", "Moltres", "Moltres"],
-   ["What is the final evolution form of Charmander?", "Charizard", "Charmeleon", "Charmastadar", "Charmega", "Charizard"]
+   ["What was the name of the grass legendary bird from generation one?", "Plantalon", "Sundres", "There Wasn't One", "Moltres", "There Wasn't One"],
+   ["What is the final evolution form of Bulbasuar?", "Venusaur", "Bulbadon", "Venosaur", "Venumegaur", "Venusaur"]
   ],
   [ // Electric
   ["What was the fire type starter of genration one?", "Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Charmander"],

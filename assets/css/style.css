@@ -22,6 +22,55 @@ body {
     border: 0;
 }
 
+.fire-background {
+    width: 100%;
+    height: auto;
+    background: url("https://i.imgur.com/QjLWxRH.png") no-repeat bottom right fixed; /* fire Background image, hosted on Imagr*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    justify-content: center;
+    border: 0;
+}
+
+.grass-background {
+    width: 100%;
+    height: auto;
+    background: url("https://i.imgur.com/cU3NNSb.png") no-repeat bottom right fixed; /* grass Background image, hosted on Imagr*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    justify-content: center;
+    border: 0;
+}
+
+.electric-background {
+    width: 100%;
+    height: auto;
+    background: url("https://i.imgur.com/tqSTHkc.png") no-repeat bottom right fixed; /* electric Background image, hosted on Imagr*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    justify-content: center;
+    border: 0;
+}
+
+.water-background {
+    width: 100%;
+    height: auto;
+    background: url("https://i.imgur.com/Is4SpZ5.png") no-repeat bottom right fixed; /* water Background image, hosted on Imagr*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    justify-content: center;
+    border: 0;
+}
+
+
 /* ------------------------------------------------------------------------------------------- Intro text page */
 
 .blank-background {
@@ -131,12 +180,12 @@ body {
 }
 
 .button, .welcome-button {
-    background-color: rgba(218,165,32,0.9);
+    background-color: #CC0000;
     border-radius: 10px;
-    color: #000;
+    color: #DFDFDF;
     text-align: center;
-    border: 2px solid #000;
-    box-shadow: 1px 1px 2px black, 0 0 5px rgb(255,255,255);
+    border: 2px solid rgba(255,255,255,0.2);
+    box-shadow: 1px 1px 2px black, 0 0 5px #DFDFDF;
     font-size: 60%;
 }
 
@@ -173,7 +222,7 @@ a {
     font-size: 300%;
     text-shadow: 3px 3px 4px black;
     text-align: center;
-    background-color: rgba(218,165,32,0.8);
+    background-color: #CC0000;
     border-radius: 25px;
     width: 65%;
     margin: auto;
@@ -212,30 +261,30 @@ a {
 }
 
 .fire .answer, .fire-color {
-    background-color: #d74f40;
-    color: #fbb928;
+    background-color: #de5138;
+    color: #fed276;
 }
 
 .grass .answer, .grass-color {
-    background-color: #005d4a;
-    color: #a7acaf;
+    background-color: #378e8e;
+    color: #cef79f;
 }
 
 .electric .answer, .electric-color {
-    background-color: #fbb92f;
-    color: #07080c;
+    background-color: 	#f4dc26;
+    color:	#000000;
 }
 
 .water .answer, .water-color {
-    background-color: #203268;
-    color: #886031;
+    background-color:#93c8d0;
+    color: 	#f3c877;
 }
 
 #question-text, #how-to-play-text {
     font-size: 250%;
     color: #07080c;
     text-shadow: 2px 2px 3px white;
-    background-color: rgba(218,165,32,0.5);
+    background-color: rgba(255,255,255,0.5);
     border-radius: 25px;
     padding: 25px;
     margin: auto;
@@ -267,7 +316,7 @@ a {
 }
 
 .progress-overlay {
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.5);
     border-radius: 25px;
     height: 200%;
     width: 50%;
@@ -304,7 +353,7 @@ progress[value]::-moz-progress-bar { /* Edit styling on Mozilla Firebox web brow
 }   
 
 progress[value]::-webkit-progress-bar { /* Edit outer styling on other web browsers */
-  background-color: #a0a150;
+  background-color: rgba(255,255,255,0.5);
   border-radius: 15px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
 }
@@ -339,7 +388,7 @@ progress[value]::-webkit-progress-value { /* Edit inner styling on other web bro
     font-size: 250%;
     color: #07080c;
     text-shadow: 2px 2px 3px white;
-    background-color: rgba(218,165,32,0.5);
+    background-color: rgba(255,255,255,0.5);
     border-radius: 25px;
     padding: 15px;
     width: 75%;

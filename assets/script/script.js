@@ -138,6 +138,22 @@ function resetQuiz(type) { // Reset the type at the start, so if the user is pla
 }
 
 // ---------------------------------------------------------------- Chooses question set depending on which type was chosen
+function backgroundChange() {
+    if (typeChosen === "fire") {
+        bodyPage.classList.remove("background-image"); // remove normal background image
+        bodyPage.classList.remove("blank-background"); // add fire background
+    } else if (typeChosen === "grass") {
+        questionsSet = fullQuestions[1];
+    } else if (typeChosen === "electric") {
+        questionsSet = fullQuestions[2];
+    } else if (typeChosen === "water") {
+        questionsSet = fullQuestions[3];
+    } 
+}
+
+
+
+
 
 function chooseQuestionSet() {
     const fullQuestions = JSON.parse(JSON.stringify(questions));

@@ -10,13 +10,12 @@
 <body id="body" class="blank-background">
     <header id="script-navbar" class="hiden">
         <nav id="navButtons">
-            <button class="button" onclick="instructionsPage()"><i class="nav mh-info"></i><br>Instructions</button>
-            <button class="button" onclick="homePage()"><i class="nav mh-home"></i><br>Home</button>
-            <button class="button" id="restart" onclick=><i class="nav mh-restart"></i><br>Restart</button>
+            <button class="button" onclick="toInstructionsPage()"><i class="nav mh-info"></i><br>Instructions</button>
+            <button class="button" onclick="toHomePage()"><i class="nav mh-home"></i><br>Home</button>
         </nav>
     </header>
     <main id="main-area">
-        <section id="welcome-page" class="welcome-page-content" onclick="startQuiz()">
+        <section id="welcome-page" class="welcome-page-content" onclick="enterQuiz()">
             <div class="welcome-banner">
                 <p id="welcome">
                     Hello ...............
@@ -30,11 +29,11 @@
     </main>
 
     <section id="choose-type-page" class="page-content hiden">
-        <h1 class="choose-house">Choose Your House</h1>
+        <h1 class="choose-house">Choose Your Type</h1>
         <div class="overlay">
-            <button class="type-text type fire-color type-selector" onclick="setType('fire')">Fire</button>
-            <button class="type-text type grass-color type-selector"  onclick="setType('grass')">Grass</button>
+            <button class="type-text type fire-color type-selector" onclick="setType ('fire')">Fire</button>
             <button class="type-text type electric-color type-selector" onclick="setType('electric')">Electric</button>
+            <button class="type-text type grass-color type-selector"  onclick="setType('grass')">Grass</button>
             <button class="type-text type water-color type-selector" onclick="setType('water')">Water</button>
         </div>
     </section>

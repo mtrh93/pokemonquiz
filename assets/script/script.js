@@ -12,7 +12,7 @@ const navbar = document.getElementById("script-navbar");
 const homepage = document.getElementById("choose-type-page");
 const quizpage = document.getElementById("quiz-page");
 const scorePage = document.getElementById("score-page");
-const howToPlay = document.getElementById("how-to-play-page");
+const instructipnPage = document.getElementById("instruction-page");
 const footerPage = document.getElementById("footer");
 
 // ---------------------------------------------------------------- Counter variables
@@ -35,20 +35,20 @@ let resultQuote = document.getElementById("result-quote");
 function toHomePage() {
     welcomePage.classList.add("hiden");
     homepage.classList.remove("hiden");
-    howToPlay.classList.add("hiden");
+    instructipnPage.classList.add("hiden");
     quizpage.classList.add("hiden");
     bodyPage.classList.remove("fire-background");
     bodyPage.classList.remove("grass-background");
     bodyPage.classList.remove("electric-background");
     bodyPage.classList.remove("water-background");
     bodyPage.classList.add("background-image");
-    howToPlay.classList.add("hiden");
+    instructipnPage.classList.add("hiden");
     navbarMovement();
 }
 
 function toInstructionsPage() {
     homepage.classList.add("hiden");
-    howToPlay.classList.remove("hiden");
+    instructipnPage.classList.remove("hiden");
     quizpage.classList.add("hiden");
     navbarMovement();
 }
@@ -271,7 +271,7 @@ function startQuiz() { // Starts the quiz from scratch,
 
 function pageSwap() {
     homepage.classList.add("hiden");
-    howToPlay.classList.add("hiden");
+    instructipnPage.classList.add("hiden");
     quizpage.classList.add("hiden");
 }
 

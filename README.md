@@ -44,7 +44,7 @@ the four types chosen are taken from the original pokemon red, blue and yellow g
 The quiz page is where the questions are asked and the user can select answers. The quiz page background is changed depending on theme chosen.
 The question order is also randomized thanks to a javascript function.
 
-![PokemonQuiz](assets/Images/choosetypepage.png)
+![PokemonQuiz](assets/Images/HomePage.png)
 
 * **Score Page**
 The score page is the last page the user will see and provides the users answer and a quote.
@@ -54,7 +54,7 @@ The score page is the last page the user will see and provides the users answer 
 * **Instructions Page**
 The instrucitons Page is an optional page that the user wmay not see but provides a guide to the user on how the quiz functions.
 
-![ScorePage](assets/Images/ScorePage.png)
+![HotToPage](assets/Images/HotToPage.png)
 
 * **Color Scheme**
 The colour pallete for this project was taken from a multitude of pokemon themes.

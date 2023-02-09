@@ -76,7 +76,7 @@ const questions = [
    [ // Fire
     ["What was the fire type starter of genration one?", "Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Charmander"],
     ["What was the name of the fire gym location in generation one?", "Ceruleon", "Lavaridge", "Cinnabar", "Pallet", "Cinnabar"],
-    ["What was the name of the fire type badge in generation one?", "Fire Badge", "Heat Badge", "Magma Badge", "Volcanoe Badge", "Volcanoe Badge"],
+    ["What was the name of the fire type badge in generation one?", "Fire Badge", "Heat Badge", "Magma Badge", "Volcano Badge", "Volcano Badge"],
     ["Which of the following types are super effective agaisnt fire types?", "Water", "Ice", "Grass", "Electric", "Water"],
     ["What is the fire Evee evolution called?", "Jolteon", "Blazeon", "Flareon", "Burneon", "Flareon"],
     ["In generation two how many steps would it take to hatch a starter pokemon?", "2560", "5170", "5550", "5120", "5120"],
@@ -98,28 +98,28 @@ const questions = [
    ["What is the final evolution form of Bulbasuar?", "Venusaur", "Bulbadon", "Venosaur", "Venumegaur", "Venusaur"]
   ],
   [ // Electric
-  ["What was the fire type starter of genration one?", "Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Charmander"],
-  ["What was the name of the fire gym location in generation one?", "Ceruleon", "Lavaridge", "Cinnabar", "Pallet", "Cinnabar"],
+  ["What was the name of the starter pokemon players are given when they begin pokemon yellow?", "Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Pikachu"],
+  ["What was the name of the electric gym location in generation one?", "Vermilion", "Voltown", "Veridian", "Pallet", "Vermilion"],
   ["What was the name of the fire type badge in generation one?", "Fire Badge", "Heat Badge", "Magma Badge", "Volcanoe Badge", "Volcanoe Badge"],
   ["Which of the following types are super effective agaisnt fire types?", "Water", "Ice", "Grass", "Electric", "Water"],
-  ["What is the fire Evee evolution called?", "Jolteon", "Blazeon", "Flareon", "Burneon", "Flareon"],
+  ["What is the electric Evee evolution called?", "Jolteon", "Volteon", "Flareon", "Shockeon", "Jolteon"],
   ["In generation two how many steps would it take to hatch a starter pokemon?", "2560", "5170", "5550", "5120", "5120"],
   ["Which of the below is the name of the fire type pokemon Growlithe's evolution?", "Growlihound", "Arcanine", "Lithengrowl", "Barkanine", "Arcanine"],
   ["What pokemon did ash first catch in a pokeball?", "Buterfree", "Caterpie", "Pikachu", "Pidgey", "Caterpie"],
-  ["What was the name of the fire legendary bird from generation one?", "Articuno", "Flamedos", "Phoenix", "Moltres", "Moltres"],
-  ["What is the final evolution form of Charmander?", "Charizard", "Charmeleon", "Charmastadar", "Charmega", "Charizard"]
+  ["What was the name of the electric legendary bird from generation one?", "Bolticuno", "Zapdos", "Ther Wasn't One", "Voltres", "Zapdos"],
+  ["What stone is required for pikachu to evolve onto Raichu?", "Thunder Stone", "Lightning Stone", "Charge Stone", "Watt Stone", "Thunder Stone"]
  ],
  [ // Water
- ["What was the fire type starter of genration one?", "Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Charmander"],
- ["What was the name of the fire gym location in generation one?", "Ceruleon", "Lavaridge", "Cinnabar", "Pallet", "Cinnabar"],
- ["What was the name of the fire type badge in generation one?", "Fire Badge", "Heat Badge", "Magma Badge", "Volcanoe Badge", "Volcanoe Badge"],
+ ["What was the water type starter of genration one?", "Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Squirtle"],
+ ["What was the name of the water gym location in generation one?", "Ceruleon", "Cascadia", "Cinnabar", "Pallet", "Ceruleon"],
+ ["What was the name of the water type badge in generation one?", "Rain Badge", "Fall Badge", "Cascade Badge", "Aqua Badge", "Cascade Badge"],
  ["Which of the following types are super effective agaisnt fire types?", "Water", "Ice", "Grass", "Electric", "Water"],
- ["What is the fire Evee evolution called?", "Jolteon", "Blazeon", "Flareon", "Burneon", "Flareon"],
+ ["What is the water Evee evolution called?", "Fisheon", "Moisteon", "Waveon", "Vaporeon", "Vaporeon"],
  ["In generation two how many steps would it take to hatch a starter pokemon?", "2560", "5170", "5550", "5120", "5120"],
  ["Which of the below is the name of the fire type pokemon Growlithe's evolution?", "Growlihound", "Arcanine", "Lithengrowl", "Barkanine", "Arcanine"],
  ["What pokemon did ash first catch in a pokeball?", "Buterfree", "Caterpie", "Pikachu", "Pidgey", "Caterpie"],
- ["What was the name of the fire legendary bird from generation one?", "Articuno", "Flamedos", "Phoenix", "Moltres", "Moltres"],
- ["What is the final evolution form of Charmander?", "Charizard", "Charmeleon", "Charmastadar", "Charmega", "Charizard"]
+ ["What was the name of the water legendary bird from generation one?", "Articuno", "There Wasn't One", "Aquados", "Lugia", "There Wasn't One"],
+ ["What is the final evolution form of Squirtle?", "Squirtasaur", "Warturtle", "Wartortle", "Blastoise", "Blastoise"]
 ]
 ];
 

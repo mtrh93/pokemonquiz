@@ -17,8 +17,8 @@ const footerPage = document.getElementById("footer");
 
 // ---------------------------------------------------------------- Counter variables
 
-let questionsAnswered = 0;
-let currentScore = 0;
+let answerSelected = 0;
+let userScore = 0;
 let scoreArea = document.getElementById("scoring");
 
 // ---------------------------------------------------------------- Questions variables
@@ -27,7 +27,7 @@ let questionArray;
 let activeQuestion;
 let questionPool;
 let questionArrayLength;
-let resultQuote = document.getElementById("result-quote");
+let endQuote = document.getElementById("end-quote");
 
 // ----------------------------------------------------------------------------------------------------------------------------------------- Page functions
 // ---------------------------------------------------------------- Navigations
@@ -142,7 +142,7 @@ function setType(type) {
 
 function resetQuiz(type) { // Reset the type at the start, so if the user is playing a second time, they're not stuck with the same house
     answers.classList.remove(type);
-    currentScore = 0;
+    userScore = 0;
 }
 
 // ---------------------------------------------------------------- Chooses question set depending on which type was chosen
@@ -173,7 +173,7 @@ function chooseQuestionSet() {
     } else if (typeChosen === "water") {
         questionArray = wholeQuestions[3];
     } else {
-        alert("That's not a valid type. Please return to the welcome page and choose again.");
+        alert("Oh no! Something went wrong and your pokemon feinted! Scurry to the Pokemon center and hit that home button!");
     }
     questionArrayLength = questionArray.length; // Set a variable to include the total number of questions in that set, which doesn't change as the questionPool decreases
     document.getElementById("progress-bar").max = questionArrayLength; // Set the progress bar max to the number of questions in the total question set
@@ -217,35 +217,35 @@ function endQuiz() {
 // ---------------------------------------------------------------- Check the answer given by the user and move to the next question
 
 function pushScore() {
-    scoreArea.innerText = `${currentScore}/10`; // Pushes the updated score to the score area for the user to see
+    scoreArea.innerText = `${userScore}/10`; // Pushes the updated score to the score area for the user to see
 }
 
 function pushProgress() {
-    document.getElementById("progress-bar").value = questionsAnswered;
+    document.getElementById("progress-bar").value = answerSelected;
 }
 
 function checkAnswer(num) {
     if (activeQuestion[num] == activeQuestion[5]) { // if content of index of clicked answer is equal to the question correct answer
-       currentScore++; // Add to the score
-       questionsAnswered++; // Increment how many questions are answered
+       userScore++; // Add to the score
+       answerSelected++; // Increment how many questions are answered
        pushScore();
     } else {
-        questionsAnswered++; // If the answer is incorrect, just increment the question total
+        answerSelected++; // If the answer is incorrect, just increment the question total
     }
-    nextQuestion();
+    newQuestion();
     pushProgress();
 }
 
-function nextQuestion() {
-    if (questionsAnswered < questionArrayLength) { // checks to see if the current question is the last question or not
+function newQuestion() {
+    if (answerSelected < questionArrayLength) { // checks to see if the current question is the last question or not
         questionPool--; // Decrement the question pool for the Randomizer
         removeOldQuestion();
         randomiseQuestionOrder();
         populateQuestion();
-    } else if (questionsAnswered === questionArrayLength) { // ends the quiz if its final question
+    } else if (answerSelected === questionArrayLength) { // ends the quiz if its final question
        endQuiz();
     } else {
-        alert("Oh no! Something went wrong! Please return to the homepage and try again.");
+        alert("Oh no! Something went wrong and your pokemon feinted! Scurry to the Pokemon center and hit that home button!");
     }
 }
 
@@ -258,8 +258,8 @@ function removeOldQuestion() {
 // ---------------------------------------------------------------- Start the quiz
 
 function startQuiz() { // Starts the quiz from scratch,
-    currentScore = 0;
-    questionsAnswered = 0;
+    userScore = 0;
+    answerSelected = 0;
     pushScore();
     pushProgress();
     chooseQuestionSet();
@@ -278,16 +278,16 @@ function pageSwap() {
 function showScorePage() { // Sets the result image and text depending on what score the user achieves
     scorePage.classList.remove("hiden");
     quizpage.classList.add("hiden");
-    document.getElementById("final-score").innerText = `${currentScore} / 10`; // Populate their score
-    if (currentScore <= 2) {
-        resultQuote.innerText = "Did you ever leave Pallet town?";
-    } else if (currentScore <= 5 && currentScore > 2) {
-        resultQuote.innerText = "Did someone google a few answers?";
-    } else if (currentScore <= 8 && currentScore > 5) {
-        resultQuote.innerText = "I know what you played when you were younger";
-    } else if (currentScore <= 10 && currentScore > 8) {
-        resultQuote.innerText = "You are well on your way to becoming a pokemon Master";
+    document.getElementById("final-score").innerText = `${userScore} / 10`; // Populate their score
+    if (userScore <= 2) {
+        endQuote.innerText = "Did you ever leave Pallet town?";
+    } else if (userScore <= 5 && userScore > 2) {
+        endQuote.innerText = "Did someone google a few answers?";
+    } else if (userScore <= 8 && userScore > 5) {
+        endQuote.innerText = "I know what you played when you were younger";
+    } else if (userScore <= 10 && userScore > 8) {
+        endQuote.innerText = "You are well on your way to becoming a pokemon Master";
     } else {
-        alert("Oh no! Something went wrong! Please try again.");
+        alert("Oh no! Something went wrong and your pokemon feinted! Scurry to the Pokemon center and hit that home button!");
     };
 }

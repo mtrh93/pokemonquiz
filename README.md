@@ -105,7 +105,8 @@ The quiz works as intended and the score displays correctly. it works on multipl
 
 ## Credits
 * (https://css-tricks.com/html5-progress-element/) for the progress bar
-* 
+* Background Images from MapleRose via shutterstock.
+* Parts of Javascript and the HTML and CSS layout from (https://abibubble.github.io/milestone2-harry-potter-quiz/)
 
 
 ### Content

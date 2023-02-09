@@ -124,7 +124,6 @@ body {
     align-items: center;
     width: 90%;
     margin: auto;
-    border-radius: 50%;
 }
 
 .button {
@@ -132,14 +131,15 @@ body {
 }
 
 .button, .welcome-button {
-    background-color: rgba(218, 32, 32, 0.9);
-    border-radius: 10%;
+    background-color: rgba(218,165,32,0.9);
+    border-radius: 10px;
     color: #000;
     text-align: center;
     border: 2px solid #000;
     box-shadow: 1px 1px 2px black, 0 0 5px rgb(255,255,255);
     font-size: 60%;
 }
+
 a {
     text-decoration: none;
 }
@@ -150,7 +150,7 @@ a {
 
 /* ------------------------------------------------------------------------------------------- House selectors and Q+As */
 
-.main-section {
+.main-area {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -323,7 +323,7 @@ progress[value]::-webkit-progress-value { /* Edit inner styling on other web bro
     background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 
-#score, #timer {
+#scoring{
     background: rgba(255,255,255,0.6);
     border-radius: 10px;
     padding: 10px;
@@ -437,6 +437,7 @@ footer p {
 /* ------------------------------------------------------------------------------------------- Responsive design */
 
 @media screen and (max-width: 1200px) { /* Media queries for smaller computer screens */
+
     .choose-type, .question-text {
         font-size: 200%;
     }
@@ -477,11 +478,11 @@ footer p {
         height: 40%;
         margin-bottom: 3px;
     }
-    #score, #timer {
+    #scoring{
         font-size: 80%;
     }
     .progress-position {
-        margin-top: 25%;
+        margin-top: 18%;
     }
     .progress-overlay {
         height: 150%;
@@ -537,11 +538,11 @@ footer p {
         height: 55%;
         margin-bottom: 3px;
     }
-    #score, #timer {
+    #score{
         font-size: 80%;
     }
     .progress-position {
-        margin-top: 45%;
+        margin-top: 35%;
     }
     .progress-overlay {
         height: 150%;
@@ -554,13 +555,19 @@ footer p {
     .score {
         margin-bottom: 5%;
     }
+    .result-image {
+        width: 70%;
+    }
+    .result-image-container {
+        margin-bottom: 5%;
+    }
     .how-to-play-p {
         font-size: 90%;
     }
 }
 
 @media screen and (max-width: 800px) and (orientation: landscape) { /* Media queries for landscape mobile */
-    #welcome {
+    #welcome{
         font-size: 125%;
     }
     .welcome-overlay {
@@ -592,7 +599,7 @@ footer p {
     .type-selector, .answer-selector {
         height: 100%;
     }
-    #score, #timer {
+    #score{
         font-size: 60%;
         height: 100%;
     }
@@ -658,7 +665,7 @@ footer p {
     .type-selector, .answer-selector {
         height: 45%;
     }
-    #score, #timer {
+    #score{
         font-size: 60%;
         height: 100%;
     }

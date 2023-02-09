@@ -1,7 +1,3 @@
-console.log("connected")
-
-// ----------------------------------------------------------------------------------------------------------------------------------------- Global variables
-
 // ---------------------------------------------------------------- House variables
 
 let typeChosen;
@@ -137,7 +133,7 @@ function setType(type) {
 }
 
 function resetQuiz() { // Reset the type at the start, so if the user is playing a second time, they're not stuck with the same house
-    answers.classList.remove();
+    answers.classList.remove(type);
     currentScore = 0;
 }
 
